@@ -1,0 +1,13 @@
+{% extends 'main/index.html'%}
+{% block title %}{{ articles.title }}{% endblock %}
+{% block content %}
+<div class="post">
+  <h1>{{ articles.title }}</h1>
+  <img width='800' src="{{ articles.image.url }}">
+  <p>{{ articles.full_text }}</p>
+  <p class="date">
+    {{ articles.date }}
+  </p>
+</div>
+
+{% endblock %}

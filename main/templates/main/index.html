@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+  </head>
+  <body>
+    <header>
+      <img src="{% static 'main/img/image.png' %}" width='250px'>
+    </header>
+    <nav>
+      <div class="verh">
+        <a href="{% url 'main' %}">Главная</a><a href="{% url 'articles_list' %}">Новости</a><a>Карты</a><a>Предложить идею</a>
+      </div>
+    </nav>
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+    <footer>
+
+    </footer>
+  </body>
+</html>
