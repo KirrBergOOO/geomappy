@@ -55,14 +55,17 @@ nav{
   padding-bottom: 10px;
   width: 100%;
 }
-.verh a{
+a{
   margin-right: 60px;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 22px;
+  color: #000000;
+  padding: 3px;
 }
-.verh a hover{
-  font-size: 28px;
-  color: #423189
+.verh a:hover{
+  color: #423189;
+  background-color: #ffff00;
+  transition: 1s;
 }
 
 .about{
