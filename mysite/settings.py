@@ -129,3 +129,18 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION': 'unique-snowflake',
+        'TIMEOUT': 300,
+        # Тайм-аут кэши (по умолчанию 300, никто не сказал, что никогда не истекает, 0 означает немедленное срок действия)
+        'OPTIONS':{
+            'MAX_ENTRIES': 300,
+            # Максимальное количество кеша (по умолчанию 300)
+            'CULL_FREQUENCY': 3,
+            # После того, как кэш достигнет максимального числа, соотношение количества кеша удаляется, а именно: 1 / CULL_FRECENTY (по умолчанию 3); На практике это обычно не используется, слишком просто.
+        }
+    }
+}
