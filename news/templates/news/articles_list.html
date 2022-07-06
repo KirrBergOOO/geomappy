@@ -1,11 +1,10 @@
 {% extends 'main/index.html'%}
 {% block title %}Новости{% endblock %}
 {% block content %}
-{% if articles_list %}
-  {% for el in articles_list %}
+{% if news %}
+  {% for el in news %}
     <a href="{{ el.get_absolute_url }}">
       <div class="map">
-        <p>{{ articles.get_absolute_url }}</p>
         <h2>{{ el.title }}</h2>
         <img width="80%" src="{{ el.image.url }}">
         <br>
