@@ -47,8 +47,9 @@ h2{
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 p{
-  font-size: 1vw;
+  font-size: calc(12px + 0.7vw);
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  line-height: 1.5;
 }
 
 header{
@@ -98,7 +99,6 @@ a:hover{
 .ab{
   margin-left: 3vw;
   margin-right: 3vw;
-  font-size: 1.5vw;
 }
 
 main{
@@ -132,7 +132,7 @@ main img{
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 100px;
-  width: 60vw;
+  width: 50vw;
   padding: 15px 50px;
   background-color: rgb(150,150,150);
   border: 3px solid;
@@ -146,6 +146,8 @@ main img{
   background-color: rgb(180,180,180);
 }
 
+
+
 .date{
   text-align: right;
   font-size: 18px;
@@ -156,9 +158,13 @@ main img{
   margin-left:75px;
   margin-right: 75px;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
 }
 .post{
   padding-bottom: 80px
+}
+.post img{
+  margin-bottom: 3vh;
 }
 
 .input-group input{
@@ -169,4 +175,8 @@ main img{
 .input-group button{
   margin-right: 10%;
   margin-bottom: 5%;
+}
+
+.pagination{
+  font-size: calc(38px+0,8vw);
 }

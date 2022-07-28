@@ -1,19 +1,20 @@
 {% extends 'main/index.html'%}
 {% block title %}Новости{% endblock %}
 {% block content %}
-{% if news %}
-  {% for el in news %}
-    <div class="map">
-      <a href="{{ el.get_absolute_url }}">
+{% if posts %}
+  {% for el in posts %}
+    <a href="{{ el.get_absolute_url }}">
+      <div class="map">
         <h2>{{ el.title }}</h2>
-        <img width="80%" src="{{ el.image.url }}">
+        <img width="95%" src="{{ el.image.url }}">
         <br>
         <p class="date">{{ el.date }}</p>
-      </a>
-    </div>
+      </div>
+    </a>
   {% endfor %}
   {% else %}
     <h1>Нет новостей</h1>
 {% endif %}
 <br>
+{% include "news/pagination.html" with page=posts %}
 {% endblock %}
