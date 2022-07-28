@@ -11,3 +11,11 @@ class ArticlesListView(ListView):
 class ArticlesDetailView(DetailView):
     model = Articles
     template_name = 'news/articles_detail.html'
+class SearchResults(ListView):
+    model = Articles
+    template_name = 'news/search.html'
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        if query:
+            queryset = Articles.objects.filter(title__icontains=query)
+            return queryset

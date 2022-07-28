@@ -3,16 +3,17 @@
 {% block content %}
 {% if news %}
   {% for el in news %}
-    <a href="{{ el.get_absolute_url }}">
-      <div class="map">
+    <div class="map">
+      <a href="{{ el.get_absolute_url }}">
         <h2>{{ el.title }}</h2>
         <img width="80%" src="{{ el.image.url }}">
         <br>
         <p class="date">{{ el.date }}</p>
-      </div>
-    </a>
+      </a>
+    </div>
   {% endfor %}
   {% else %}
     <h1>Нет новостей</h1>
 {% endif %}
+<br>
 {% endblock %}

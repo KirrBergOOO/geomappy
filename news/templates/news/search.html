@@ -1,0 +1,28 @@
+{% extends 'main/index.html'%}
+{% block title %}Поиск{% endblock %}
+{% block content %}
+<form action="{% url 'search' %}" method="get">
+  {% csrf_token %}
+  <div class="input-group">
+    <input type="search" class="form-control rounded" placeholder="Поиск" aria-label="Search" aria-describedby="search-addon" name='q' />
+    <button type="submit" class="btn btn-outline-primary">Искать</button>
+  </div>
+</form>
+{% if object_list %}
+  {% for el in object_list %}
+    <div class="map">
+      <a href="{{ el.get_absolute_url }}">
+        <h2>{{ el.title }}</h2>
+        <img width="80%" src="{{ el.image.url }}">
+        <br>
+        <p class="date">{{ el.date }}</p>
+      </a>
+    </div>
+  {% endfor %}
+{% else %}
+  <br>
+  <br>
+  <h2>Ничего не найдено(</h2>
+{% endif %}
+<br>
+{% endblock %}
