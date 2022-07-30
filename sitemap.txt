@@ -1,0 +1,3 @@
+http://beresnevks.pythonanywhere.com/
+http://beresnevks.pythonanywhere.com/news/
+http://beresnevks.pythonanywhere.com/news/search
