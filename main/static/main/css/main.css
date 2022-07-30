@@ -177,6 +177,18 @@ main img{
   margin-bottom: 5%;
 }
 
-.pagination{
-  font-size: calc(38px+0,8vw);
+.pag-center{
+  font-size: calc(10px + 1vw);
+  display: inline;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.pag-left{
+  font-size: calc(10px + 1vw);
+  margin-left: 3vw;
+}
+
+.pag-right{
+  font-size: calc(10px + 1vw);
 }
