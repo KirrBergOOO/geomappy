@@ -1,0 +1,1 @@
+sitemap: http://beresnevks.pythonanywhere.com/sitemap.txt
