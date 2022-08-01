@@ -1,6 +1,10 @@
 {% extends 'main/index.html'%}
 {% block title %}Geomappy. Новости.{% endblock %}
 {% block content %}
+<h1>Новости</h1>
+<br>
+<br>
+<br>
 {% if posts %}
   {% for el in posts %}
     <a href="{{ el.get_absolute_url }}">
