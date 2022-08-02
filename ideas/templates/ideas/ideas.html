@@ -1,0 +1,15 @@
+{% extends 'main/index.html' %}
+
+{% block title %}Geomappy. Предожить идею.{% endblock %}
+
+{% block content %}
+<h1>Предложить идею</h1>
+<br>
+<br>
+<form method="POST" class="post-form">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <br>
+  <button type="submit" class="save btn btn-default">Отправить</button>
+</form>
+{% endblock %}

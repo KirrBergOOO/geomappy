@@ -34,6 +34,7 @@ MEDIA_URL = '/media/'
 INSTALLED_APPS = [
     'main.apps.MainConfig',
     'news.apps.NewsConfig',
+    'ideas.apps.IdeasConfig',
     'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',

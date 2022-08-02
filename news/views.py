@@ -5,7 +5,7 @@ from django.core.paginator import Paginator
 # Create your views here.
 def new(request):
     new = Articles.objects.order_by("-date")
-    paginator = Paginator(new, 2)
+    paginator = Paginator(new, 5)
     page = request.GET.get('page')
     try:
         posts = paginator.get_page(page)
