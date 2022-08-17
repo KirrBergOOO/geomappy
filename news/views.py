@@ -2,10 +2,12 @@ from django.shortcuts import render
 from .models import Articles
 from django.views.generic import ListView, DetailView
 from django.core.paginator import Paginator
+from django.views.decorators.cache import cache_page
 # Create your views here.
+@cache_page(600, cache='default', key_prefix='')
 def new(request):
     new = Articles.objects.order_by("-date")
-    paginator = Paginator(new, 5)
+    paginator = Paginator(new, 3)
     page = request.GET.get('page')
     try:
         posts = paginator.get_page(page)

@@ -6,10 +6,10 @@
 <h1>Предложить идею</h1>
 <br>
 <br>
-<form method="POST" class="post-form">
+<form method="POST" class="">
   {% csrf_token %}
   {{ form.as_p }}
   <br>
-  <button type="submit" class="save btn btn-default">Отправить</button>
+  <button type="submit" class="btn btn-warning btn-lg">Отправить</button>
 </form>
 {% endblock %}
