@@ -1,5 +1,6 @@
-{% extends 'main/index.html' %}
 
+{% extends 'main/index.html' %}
+{% load static %}
 {% block title %}Geomappy. Предожить идею.{% endblock %}
 
 {% block content %}
@@ -12,4 +13,5 @@
   <br>
   <button type="submit" class="btn btn-warning btn-lg">Отправить</button>
 </form>
+<link rel="stylesheet" href="{% static 'ideas/css/ideas.css' %}">
 {% endblock %}
