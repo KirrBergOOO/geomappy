@@ -4,12 +4,12 @@
 <form action="{% url 'search' %}" method="get">
   {% csrf_token %}
   <div class="input-group">
-    <input type="search" class="form-control rounded" placeholder="Поиск" aria-label="Search" aria-describedby="search-addon" name='q' />
+    <input value="{{ question }}" type="search" class="form-control rounded" placeholder="Поиск" aria-label="Search" aria-describedby="search-addon" name='q' />
     <button type="submit" class="btn btn-outline-primary">Искать</button>
   </div>
 </form>
-{% if object_list %}
-  {% for el in object_list %}
+{% if searched %}
+  {% for el in searched %}
     <div class="map">
       <a href="{{ el.get_absolute_url }}">
         <h2>{{ el.title }}</h2>
