@@ -7,6 +7,7 @@ def ideas(request):
         form = IdeasForm(request.POST)
         if form.is_valid():
             form.save()
+            form = IdeasForm()
     else:
         form = IdeasForm()
 
